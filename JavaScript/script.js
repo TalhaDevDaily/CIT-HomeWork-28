@@ -1,10 +1,43 @@
 const counterHeader = document.querySelectorAll(".counter-header");
+const counterInput = document.querySelectorAll("input");
+const counterBtn = document.querySelectorAll("button");
 
-let i = 0;
-
+// Make an Array out of Nodelist
 const headerArray = Array.from(counterHeader);
-console.log(headerArray);
 
-counterHeader.forEach(function (items) {
-  console.log(items);
+headerArray.map((headerItems) => {
+  let i = 0;
+
+  const headerData = Number(headerItems.dataset.header);
+  const counterFun = function () {
+    i++;
+
+    if (i === headerData) {
+      clearInterval(counterInterval);
+    }
+    headerItems.innerHTML = i;
+  };
+
+  const counterInterval = setInterval(counterFun, 100);
 });
+
+// let i = 0;
+
+// console.log(counterHeader.dataset.header);
+// const headerData = Number(counterHeader.dataset.header);
+
+// const counterFun = function () {
+//   i++;
+
+//   if (i === headerData) {
+//     clearInterval(intervalCount);
+//   }
+//   counterHeader.innerHTML = i;
+// };
+
+// const intervalCount = setInterval(() => {
+//   counterFun();
+// }, 100);
+
+// When there is only one function you directly call the function
+// setInterval(counterFun, 1000)
