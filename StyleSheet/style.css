@@ -11,6 +11,7 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
+  background-color: #f0a04b;
 }
 
 .container {
@@ -27,27 +28,49 @@ body {
 .counter-primary-header {
   font-size: 6rem;
   grid-column: 1 / -1;
+  color: #fff;
 }
 
 .counterbox {
   display: grid;
   grid-template-columns: 5fr 1fr;
+  grid-template-rows: 5.1rem 7rem;
   column-gap: 1rem;
   row-gap: 3rem;
+  height: 20rem;
+  padding: 2rem 0.4rem;
+  background-color: #fef6ed;
+  border-radius: 2.5rem;
+  align-self: start;
 }
 
-.counter-header {
+h2 {
   font-size: 4rem;
   grid-column: span 2;
   justify-self: center;
+  color: #f0a04b;
 }
 
 input {
   font-size: 2rem;
   padding: 0.2rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  background-color: #ffb38e;
+  color: #fff;
+}
+
+input::placeholder {
+  color: #ffffff7c;
 }
 
 button {
   font-size: 2rem;
   font-weight: 500;
+  border-radius: 50%;
+  background-color: #f0a04b;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }
